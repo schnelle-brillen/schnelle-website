@@ -11,6 +11,14 @@
   text-shadow: 0.07em 0.07em #00be1d;
   text-align: center;
 }
+
 .sb-de-home-container > h1 > i {
   margin: 0 0.5em;
+}
+
+
+.sb-de-glasses-container {
+  display: flex;
+  padding: 4em;
+  background: #ff2f5c
 }

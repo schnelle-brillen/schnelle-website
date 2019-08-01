@@ -1,0 +1,1 @@
+export const contentURL = 'https://api.schnelle-brillen.de/'
