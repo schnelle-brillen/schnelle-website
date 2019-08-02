@@ -18,7 +18,6 @@ export default () => {
                 <Query query={getGlasses}>
                     {
                         ({loading, error, data}) => {
-                            console.log(loading, error, data);
                             if(loading || error ) {
                                 return null;
                             }
