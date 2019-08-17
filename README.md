@@ -1,6 +1,6 @@
 
 
-# Schnelle Brillen - Setz jetzt den Blinker zu deinem Leben auf der Überholspur
+# Schnelle Brillen - Setze jetzt den Blinker zu deinem Leben auf der Überholspur
 
 This is the offical code of the fast webpage [schnelle-brillen.de](https://schnelle-brillen.de) Those glasses will shoot you into another dimension. Better be prepared.
 
