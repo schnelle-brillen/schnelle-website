@@ -10,6 +10,8 @@ This is the offical code of the fast webpage [schnelle-brillen.de](https://schne
 * GraphQL
 * Strapi
 * MongoDB
+* dotenv
+* Github Hooks
 
 ## Available Scripts
 
@@ -37,3 +39,7 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run hook`
+
+Creates a new webserver ready to pull and update the current webpage. This will get called from Github hooks whenever a developer pushes.
