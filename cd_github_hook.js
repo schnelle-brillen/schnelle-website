@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const secret = process.env.GITHUB_HOOK_SECRET;
-const repo = '';
+const repo = 'schnelle';
 
 const http = require('http');
 const crypto = require('crypto');
@@ -16,7 +16,7 @@ http.createServer(function (req, res) {
 
         if (req.headers['x-hub-signature'] === sig) {
             exec('cd ' + repo + ' && git pull', () => {
-                exec('cd ' + repo + ' && npm run build');
+                exec('cd ' + repo + ' && npm install && npm run build');
             });
         }
     });
