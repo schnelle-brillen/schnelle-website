@@ -8,6 +8,7 @@ export default gql`
       name
       speed
       description
+      salesLink
       image {
           url
       }

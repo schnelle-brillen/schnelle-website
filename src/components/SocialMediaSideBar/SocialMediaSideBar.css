@@ -1,0 +1,19 @@
+.sb-de-social-media-side-bar {
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+}
+
+.sb-de-social-media-side-bar .sb-de-social-media-bar-element:not(:last-child) {
+    margin-right: 1em;
+}
+
+.sb-de-social-media-bar-element {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background: #f0f143;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 0.125em solid black;
+}

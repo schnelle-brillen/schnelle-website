@@ -2,16 +2,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     width: 30%;
     padding: 3em 1.5%;
+    margin: 1%;
     border: 2px solid white;
     border-radius: 2em;
+    text-decoration: none;
 }
 
 .sb-de-glass-card > h1,
 .sb-de-glass-card > h2 {
     color: white;
     text-shadow: 0.07em 0.07em #00be1d;
+    text-align: center;
 }
 
 .sb-de-glass-card > h1 {

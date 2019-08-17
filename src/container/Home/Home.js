@@ -1,7 +1,7 @@
 import React from 'react';
 import { Query } from 'react-apollo';
 import { getGlasses } from '../../services/queries'
-import { GlassCard } from '../../components'
+import { GlassCard, SocialMediaSideBar, Icon } from '../../components'
 import './Home.css';
 
 export default () => {
@@ -27,6 +27,12 @@ export default () => {
                     }
                 </Query>
             </div>
+            <SocialMediaSideBar elements={[
+                {
+                    icon: <Icon.Instagram />,
+                    link: 'https://www.instagram.com/schnelle_brillen/'
+                }
+            ]}/>
         </div>
     );
 }
