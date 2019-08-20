@@ -1,45 +1,77 @@
 .sb-de-glass-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 30%;
+    width: 27.5%;
     padding: 3em 1.5%;
     margin: 1%;
     border: 2px solid white;
     border-radius: 2em;
+}
+
+.sb-de-glass-card-content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 98%;
+    align-items: center;
+    justify-content: space-between;
     text-decoration: none;
 }
 
-.sb-de-glass-card > h1,
-.sb-de-glass-card > h2 {
+.sb-de-glass-card-content > h1,
+.sb-de-glass-card-content > h2 {
     color: white;
     text-shadow: 0.07em 0.07em #00be1d;
     text-align: center;
 }
 
-.sb-de-glass-card > h1 {
+.sb-de-glass-card-content > h1 {
     font-size: 1.2rem;
 }
 
-.sb-de-glass-card > h2 {
+.sb-de-glass-card-content > h2 {
     font-size: 1rem;
 }
 
 
-.sb-de-glass-card > img {
+.sb-de-glass-card-content > img {
     width: 100%;
     mix-blend-mode: multiply;
 }
 
+.sb-de-glass-card-buttons {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.sb-de-glass-shopping-card-button {
+    position:absolute;
+    height: 3em;
+    width: 3em;
+    border: 0.25em solid white;
+    border-radius: 0.5em;
+}
+
+.sb-de-glass-shopping-card-button:hover {
+    height: 3.25em;
+    width: 3.25em;
+    -webkit-box-shadow: 0px 0px 15px 0px rgb(182, 179, 179);
+-moz-box-shadow: 0px 0px 15px 0px rgb(182, 179, 179);
+box-shadow: 0px 0px 15px 0px rgb(182, 179, 179);
+}
+
+.sb-de-glass-shopping-card-button > svg {
+    fill: white;
+}
+
 @media (max-width: 940px) {
     .sb-de-glass-card {
-        width: 50%;
+        width: 43.5%;
     }
 }
 
 @media (max-width: 640px) {
     .sb-de-glass-card {
-        width: 100%;
+        width: 97.5%;
     }
 }

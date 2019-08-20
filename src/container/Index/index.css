@@ -1,0 +1,17 @@
+.sb-de-navbar-button {
+    display: block;
+    height: 3em;
+    width: 3em;
+    background: inherit;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+  
+.sb-de-navbar-button > svg {
+    fill: white;
+}
+
+.sb-de-content {
+    padding-top: 5em;
+}

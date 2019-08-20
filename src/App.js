@@ -1,9 +1,9 @@
 import React from 'react';
-import {Home} from './container';
+import {Index} from './container';
 
 function App() {
   return (
-    <Home />
+    <Index />
   );
 }
 
