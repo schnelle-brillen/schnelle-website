@@ -7,7 +7,7 @@ export default ({ elements }) => {
         <div className="sb-de-social-media-side-bar">
             {
                 elements.map(({ icon, link }) => (
-                    <a className="sb-de-social-media-bar-element" href={link} target="_blank" rel="noopener noreferrer">
+                    <a className="sb-de-social-media-bar-element" key={link} href={link} target="_blank" rel="noopener noreferrer">
                         {icon}
                     </a>
                 ))

@@ -1,0 +1,31 @@
+.sb-de-navbar-wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.sb-de-navbar {
+    height: 4em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 5em;
+    background: var(--main-bg-color);
+    color: white;
+}
+
+.sb-de-navbar-logo {
+    display: block;
+    height: 5em;
+    padding: 0;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+.sb-de-navbar-logo > img {
+    max-height: 100%;
+}
+
+.sb-de-navbar-elements {
+    display: flex;
+    align-items: center;
+}
