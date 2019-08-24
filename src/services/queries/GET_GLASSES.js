@@ -9,6 +9,7 @@ export default gql`
       speed
       description
       salesLink
+      price
       image {
           url
       }

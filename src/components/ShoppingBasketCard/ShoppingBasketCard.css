@@ -1,0 +1,35 @@
+.sb-de-shopping-basket-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+  padding: 2em;
+  margin: 1%;
+  border: 2px solid white;
+  border-radius: 2em;
+  color: white;
+  background: wheat;  
+  text-shadow: 0.07em 0.07em var(--main-bg-color);
+}
+
+.sb-de-shopping-basket-card > h2 {
+  text-align: center;
+}
+
+.sb-de-shopping-basket-card > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sb-de-shopping-basket-card > ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sb-de-shopping-basket-card > ul > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sb-de-shopping-basket-card > ul > li > * {
+  margin: .25em;
+}

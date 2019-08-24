@@ -1,0 +1,23 @@
+.sb-de-basket-page {
+  background: var(--main-bg-color);
+}
+
+.sb-de-checkout-page-address-form,
+.sb-de-checkout-page-payment-form,
+.sb-de-checkout-page-shopping-basket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em;
+}
+
+.sb-de-checkout-page-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sb-de-checkout-page-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

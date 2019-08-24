@@ -1,8 +1,6 @@
-
 .sb-de-glasses-container {
   display: flex;
   flex-wrap: wrap;
   padding: 4em;
-  background: #00ff2a
+  background: var(--main-bg-color);
 }
-
