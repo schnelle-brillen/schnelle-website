@@ -1,1 +1,1 @@
-export  {default as getGlasses} from './getGlasses'
+export  {default as GET_GLASSES} from './GET_GLASSES'

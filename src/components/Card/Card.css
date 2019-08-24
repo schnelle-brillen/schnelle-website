@@ -1,0 +1,10 @@
+.sb-de-card {
+  max-width: 20em;
+  padding: 2em;
+  margin: 1%;
+  border: 2px solid white;
+  border-radius: 2em;
+  background: wheat;
+  color: white;
+  text-shadow: 0.07em 0.07em var(--main-bg-color);
+}
