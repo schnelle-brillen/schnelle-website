@@ -1,0 +1,7 @@
+.sb-de-footer {
+  display: flex;
+  justify-content: center;
+  padding: 4em 10em;
+  background: #222;
+  color: white;
+}

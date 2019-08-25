@@ -1,8 +1,7 @@
-
-import { gql } from 'apollo-boost';
+import { gql } from "apollo-boost";
 
 export default gql`
-{ 
+  {
     glasses {
       id
       name
@@ -11,8 +10,8 @@ export default gql`
       salesLink
       price
       image {
-          url
+        url
       }
     }
-} 
-`
+  }
+`;
