@@ -1,6 +1,66 @@
-.sb-de-glasses-container {
+.sb-de-home-header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 5em);
+  color: white;
+  text-shadow: 0.07em 0.07em var(--main-bg-color);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.sb-de-home-header-video {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.sb-de-home-header-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+  border-radius: 2em;
+}
+
+.sb-de-home-header-overlay-button {
+  margin-top: 2em;
+}
+
+.sb-de-home-section-quote {
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  padding: 4em;
-  background: var(--main-bg-color);
+  align-items: flex-end;
+  padding: 4em 10em;
+  background: #ddd;
+}
+
+.sb-de-home-quote {
+  width: 33%;
+}
+
+@media (max-width: 1040px) {
+  .sb-de-home-section-quote {
+    padding: 4em 4em;
+  }
+
+  .sb-de-home-quote {
+    width: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sb-de-home-section-quote {
+    padding: 4em 2em;
+  }
+
+  .sb-de-home-quote {
+    width: 100%;
+  }
 }

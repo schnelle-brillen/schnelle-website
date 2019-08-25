@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { withApollo } from "react-apollo";
 import { useMutation } from "@apollo/react-hooks";
+import { withRouter } from "react-router-dom";
 import { ADD_ORDER } from "../../services/mutations/";
-import { PAGES } from "../../constants";
 import {
   ShoppingBasketCard,
   AddressForm,
@@ -12,7 +12,7 @@ import {
 
 import "./CheckoutPage.css";
 
-export default withApollo(({ basket, client, setPage, clearBasket }) => {
+const CheckoutPage = ({ basket, client, clearBasket, history }) => {
   const [formState, setFormState] = useState(0);
   const [addressInformation, setAddressInformation] = useState({
     firstname: "",
@@ -53,8 +53,8 @@ export default withApollo(({ basket, client, setPage, clearBasket }) => {
                       ...addressInformation
                     }
                   });
-                  setPage(PAGES.THANK_YOU);
-                  clearBasket()
+                  history.push('/thankyou')
+                  clearBasket();
                 }}
               />
             )}
@@ -66,4 +66,6 @@ export default withApollo(({ basket, client, setPage, clearBasket }) => {
       </div>
     </div>
   );
-});
+};
+
+export default withApollo(withRouter(CheckoutPage));

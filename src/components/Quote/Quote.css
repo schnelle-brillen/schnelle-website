@@ -1,0 +1,38 @@
+.sb-de-quote {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.sb-de-quote-image-wrapper {
+  height: 10em;
+  width: 10em;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+}
+
+.sb-de-quote-text {
+  padding: 2em;
+  margin: 2em;
+  border-radius: 2em;
+  border: 2px solid var(--main-theme-color);
+  background: white;
+  color: red;
+  text-align: center;
+}
+
+.sb-de-quote-text::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  margin-top: 2em;
+  margin-left: -0.5em;
+  content: "";
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-top: 1em solid var(--main-theme-color);
+}
