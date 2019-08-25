@@ -18,7 +18,7 @@ const Shop = ({ addItemToBasket }) => (
           }
           return data.glasses.map((glass) => (
             <GlassCard
-              onClick={() => addItemToBasket(glass.glass)}
+              onClick={() => addItemToBasket(glass)}
               {...glass}
               img={`${CONTENT_URL}${glass.image.url}`}
               key={glass.id}
