@@ -27,14 +27,22 @@ const Home = ({ addItemToBasket, history }) => {
           className="sb-de-home-header-video"
           loop
           crossorigin="anonymus"
-          src="/media/schnelle-brillen-background.webm"
           role="presentation"
           preload="auto"
           autoPlay
           muted
           width=""
           height=""
-        />
+        >
+          <source
+            type="video/webm"
+            src="/media/schnelle-brillen-background.webm"
+          />
+          <source
+            type="video/mp4"
+            src="/media/schnelle-brillen-background.mp4"
+          />
+        </video>
       </div>
       <div className="sb-de-home-section-quote">
         <Query query={GET_QUOTES}>
