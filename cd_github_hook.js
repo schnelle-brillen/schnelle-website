@@ -16,7 +16,7 @@ http.createServer(function (req, res) {
 
         if (req.headers['x-hub-signature'] === sig) {
             exec('cd ' + repo + ' && git pull', () => {
-                exec('cd ' + repo + ' && npm install && npm run build');
+                exec('cd ' + repo + ' && yarn install && yarn run build');
             });
         }
     });
