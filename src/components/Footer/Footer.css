@@ -1,7 +1,39 @@
 .sb-de-footer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 4em 10em;
   background: #222;
   color: white;
+}
+
+.sb-de-footer-disclaimer {
+  padding: 4em 0 0;
+}
+
+.sb-de-footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sb-de-footer-content h2 {
+  border-bottom: 2px solid white;
+}
+
+.sb-de-footer-content a {
+  color: white;
+  margin-bottom: 1em;
+}
+
+.sb-de-footer-content > div {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 840px) {
+  .sb-de-footer {
+    padding: 4em 2em;
+  }
 }

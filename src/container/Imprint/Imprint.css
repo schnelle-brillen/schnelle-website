@@ -1,0 +1,18 @@
+.sb-de-imprint {
+  padding: 2em 10em;
+}
+
+.sb-de-imprint-header {
+  text-align: center;
+}
+
+.sb-de-imprint-content > p {
+  font-size: 1.2rem;
+  line-height: 1.7em;
+}
+
+@media (max-width: 840px) {
+  .sb-de-imprint {
+    padding: 2em 4em;
+  }
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, withRouter } from "react-router-dom";
 import { Navbar, Icon, Button, Footer } from "./components";
-import { Home, CheckoutPage, ThankYouPage, Shop } from "./container";
+import { Home, CheckoutPage, ThankYouPage, Shop, Imprint } from "./container";
 import { useLocalStorage } from "./hooks";
 import "./index.css";
 
@@ -55,6 +55,10 @@ const App = ({ history }) => {
         <Route
           path="/thankyou"
           render={() => <ThankYouPage basket={basket} />}
+        />
+        <Route
+          path="/imprint"
+          render={() => <Imprint />}
         />
       </div>
       <Footer />
