@@ -2,9 +2,8 @@
   max-width: 20em;
   padding: 2em;
   margin: 1%;
-  border: 2px solid white;
   border-radius: 2em;
-  background: wheat;
+  background: lightgrey;
   color: white;
-  text-shadow: 0.07em 0.07em var(--main-bg-color);
+  box-shadow: 0 0 20px 0 #807a76;
 }

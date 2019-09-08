@@ -1,12 +1,8 @@
 .sb-de-glass-card {
-  display: flex;
-  flex-direction: column;
-  width: 27.5%;
-  padding: 3em 1.5%;
-  margin: 1%;
-  border: 2px solid white;
-  border-radius: 2em;
-  background: wheat;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 27.5% !important;
+  padding: 3em 1.5% !important;
 }
 
 .sb-de-glass-card-content {
@@ -20,7 +16,6 @@
 
 .sb-de-glass-card-content {
   color: white;
-  text-shadow: 0.07em 0.07em #00be1d;
   text-align: center;
 }
 
@@ -67,12 +62,12 @@
 
 @media (max-width: 940px) {
   .sb-de-glass-card {
-    width: 43.5%;
+    width: 43.5% !important;
   }
 }
 
 @media (max-width: 640px) {
   .sb-de-glass-card {
-    width: 97.5%;
+    width: 97.5% !important;
   }
 }

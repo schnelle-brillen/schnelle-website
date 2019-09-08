@@ -21,5 +21,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2em;
+  margin: 2em;
+}
+
+.sb-de-checkout-page-button-wrapper {
+  margin-top: 1em;
 }

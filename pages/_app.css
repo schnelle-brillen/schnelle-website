@@ -1,5 +1,5 @@
 :root {
-  --main-bg-color: #00ff2a;
+  --main-bg-color: white;
   --main-theme-color: #ff2800;
 }
 
@@ -10,6 +10,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Facon";
+  src: url("/static/fonts/Facon.otf");
+}
+
+.sb-de-special-header {
+  font-family: "Facon";
 }
 
 code {

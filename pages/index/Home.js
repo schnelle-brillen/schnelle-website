@@ -1,6 +1,12 @@
 import React from "react";
 import { GET_QUOTES } from "../../services/queries";
-import { Button, SocialMediaSideBar, Icon, Quote } from "../../components";
+import {
+  Button,
+  SocialMediaSideBar,
+  Icon,
+  Quote,
+  MusicPlayer
+} from "../../components";
 import { useQuery } from "@apollo/react-hooks";
 import { config } from "../../config";
 import withData from "../../apollo/withData";
@@ -15,8 +21,8 @@ const Home = () => {
     <div>
       <div className="sb-de-home-header">
         <div className="sb-de-home-header-overlay">
-          <h1>SCHNELLE BRILLEN</h1>
-          <h2>BESCHLEUNIGEN - SCHNELLE BRILLEN TRAGEN</h2>
+          <h1 className="sb-de-special-header">SCHNELLE BRILLEN</h1>
+          <h2 className="sb-de-special-header">BESCHLEUNIGEN ALTER</h2>
           <Button
             className="sb-de-home-header-overlay-button"
             onClick={() => {
@@ -68,6 +74,7 @@ const Home = () => {
           }
         ]}
       />
+      <MusicPlayer />
     </div>
   );
 };

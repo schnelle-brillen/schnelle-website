@@ -3,12 +3,6 @@
   flex-direction: column;
   max-width: 20em;
   padding: 2em;
-  margin: 1%;
-  border: 2px solid white;
-  border-radius: 2em;
-  color: white;
-  background: wheat;  
-  text-shadow: 0.07em 0.07em var(--main-bg-color);
 }
 
 .sb-de-shopping-basket-card > h2 {
@@ -31,5 +25,19 @@
 }
 
 .sb-de-shopping-basket-card > ul > li > * {
-  margin: .25em;
+  margin: 0.25em;
+}
+
+.sb-de-shopping-basket-card-item-remove-button {
+  display: flex;
+  align-items: center;
+  width: 1.25em;
+}
+
+.sb-de-shopping-basket-card-item-remove-button:hover {
+  cursor: pointer;
+}
+
+.sb-de-shopping-basket-card-item-remove-button svg {
+  fill: white;
 }
