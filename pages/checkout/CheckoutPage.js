@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { withApollo } from "react-apollo";
 import { useMutation } from "@apollo/react-hooks";
-import { withRouter } from "react-router-dom";
-import { ADD_ORDER } from "../../services/mutations/";
+import withData from "../../apollo/withData";
+import { ADD_ORDER } from "../../services/mutations";
 import {
   ShoppingBasketCard,
   AddressForm,
@@ -11,8 +10,9 @@ import {
 } from "../../components";
 
 import "./CheckoutPage.css";
+import calculatePrice from "../../helpers/calculatePrice";
 
-const CheckoutPage = ({ basket, client, clearBasket, history }) => {
+const CheckoutPage = ({ basket, client, clearBasket }) => {
   const [formState, setFormState] = useState(0);
   const [addressInformation, setAddressInformation] = useState({
     firstname: "",
@@ -23,8 +23,10 @@ const CheckoutPage = ({ basket, client, clearBasket, history }) => {
     city: "",
     zip: ""
   });
-  const [addOrder] = useMutation(ADD_ORDER, { client });
-
+  console.log(client);
+  const [addOrder] = useMutation(ADD_ORDER, {
+    client
+  });
   return (
     <div className="sb-de-basket-page">
       <div className="sb-de-checkout-page-shopping-basket">
@@ -43,24 +45,28 @@ const CheckoutPage = ({ basket, client, clearBasket, history }) => {
             )}
             {formState === 1 && (
               <PaymentForm
-                price={basket.items
-                  .reduce((total, item) => total + item.price, 0)
-                  .toFixed(2)}
+                price={calculatePrice(basket)}
                 handlePaymentSuccess={paymentInfo => {
                   addOrder({
                     variables: {
                       paymentInfo: JSON.stringify(paymentInfo),
                       ...addressInformation
                     }
+                  }).then(() => {
+                    clearBasket();
+                    document.location.href = "/thankyou";
                   });
-                  history.push('/thankyou')
-                  clearBasket();
                 }}
               />
             )}
           </div>
           <div>
             <ShoppingBasketCard basket={basket} />
+            <div>
+              <Button onClick={() => (document.location.href = "/shop")}>
+                Mehr Brillen
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -68,4 +74,4 @@ const CheckoutPage = ({ basket, client, clearBasket, history }) => {
   );
 };
 
-export default withApollo(withRouter(CheckoutPage));
+export default withData(CheckoutPage);
