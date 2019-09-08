@@ -1,0 +1,50 @@
+:root {
+  --main-bg-color: #00ff2a;
+  --main-theme-color: #ff2800;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.sb-de-navbar-button {
+  display: block;
+  height: 3em;
+  width: 3em;
+  background: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sb-de-navbar-button > svg {
+  fill: white;
+}
+
+.sb-de-navbar-button > div {
+  width: 1.5em;
+  margin-top: -1.3em;
+  border-radius: 50%;
+  line-height: 1.5;
+  font-weight: 600;
+  background: white;
+  color: var(--main-theme-color);
+}
+
+.sb-de-navbar-shop-button {
+  margin-right: 2em;
+}
+
+.sb-de-content {
+  padding-top: 5em;
+}

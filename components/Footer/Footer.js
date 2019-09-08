@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => (
@@ -7,13 +6,13 @@ const Footer = () => (
     <div className="sb-de-footer-content">
       <div className="sb-de-footer-pages">
         <h2>Seiten</h2>
-        <Link to="/shop">Shop</Link>
-        <Link to="/basket">Warenkorb</Link>
-        <Link to="/">Index</Link>
+        <a href="/shop">Shop</a>
+        <a href="/basket">Warenkorb</a>
+        <a href="/">Index</a>
       </div>
       <div className="sb-de-footer-legal">
         <h2>Legales</h2>
-        <Link to="/imprint">Impressum</Link>
+        <a href="/imprint">Impressum</a>
       </div>
     </div>
     <div className="sb-de-footer-disclaimer">

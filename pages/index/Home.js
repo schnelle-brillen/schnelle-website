@@ -1,15 +1,16 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
-import { Query } from "react-apollo";
 import { GET_QUOTES } from "../../services/queries";
 import { Button, SocialMediaSideBar, Icon, Quote } from "../../components";
+import { useQuery } from "@apollo/react-hooks";
 import { config } from "../../config";
-
+import withData from "../../apollo/withData";
 import "./Home.css";
 
 const { CONTENT_URL } = config();
 
-const Home = ({ addItemToBasket, history }) => {
+const Home = () => {
+  const { data: quotesData } = useQuery(GET_QUOTES, {});
+
   return (
     <div>
       <div className="sb-de-home-header">
@@ -18,7 +19,9 @@ const Home = ({ addItemToBasket, history }) => {
           <h2>BESCHLEUNIGEN - SCHNELLE BRILLEN TRAGEN</h2>
           <Button
             className="sb-de-home-header-overlay-button"
-            onClick={() => history.push("/shop")}
+            onClick={() => {
+              document.location.href = "/shop";
+            }}
           >
             SCHNELLE MODELLE
           </Button>
@@ -26,7 +29,7 @@ const Home = ({ addItemToBasket, history }) => {
         <video
           className="sb-de-home-header-video"
           loop
-          crossorigin="anonymus"
+          crossOrigin="anonymus"
           role="presentation"
           preload="auto"
           autoPlay
@@ -36,29 +39,26 @@ const Home = ({ addItemToBasket, history }) => {
         >
           <source
             type="video/webm"
-            src="/media/schnelle-brillen-background.webm"
+            src="/static/media/schnelle-brillen-background.webm"
           />
           <source
             type="video/mp4"
-            src="/media/schnelle-brillen-background.mp4"
+            src="/static/media/schnelle-brillen-background.mp4"
           />
         </video>
       </div>
       <div className="sb-de-home-section-quote">
-        <Query query={GET_QUOTES}>
-          {({ loading, error, data }) => {
-            if (loading || error) {
-              return null;
-            }
-            return data.quotes.map(({ img, text }) => (
+        {quotesData &&
+          quotesData.quotes.map(({ id, img, text }) => {
+            return (
               <Quote
                 className="sb-de-home-quote"
                 img={{ src: `${CONTENT_URL}${img.url}` }}
                 quote={text}
+                key={id}
               />
-            ));
-          }}
-        </Query>
+            );
+          })}
       </div>
       <SocialMediaSideBar
         elements={[
@@ -72,4 +72,4 @@ const Home = ({ addItemToBasket, history }) => {
   );
 };
 
-export default withRouter(Home);
+export default withData(Home);

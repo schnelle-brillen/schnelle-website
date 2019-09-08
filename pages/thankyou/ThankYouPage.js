@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button } from "../../components";
-import { withRouter } from "react-router-dom";
 import "./ThankYouPage.css";
 
 const ThankYouPage = ({ history }) => (
@@ -8,8 +7,8 @@ const ThankYouPage = ({ history }) => (
     <Card>
       <h1>Flotter Einkauf!</h1>
       <p>
-        Wir werden mit der Geschwindigkeit unserer Brillen dafür sorgen, dass du
-        bald eine schnelle Brille hast!
+        Wir werden mit der Geschwindigkeit unserer Brillen dafür sorgen, dass
+        auch du bald eine schnelle Brille hast!
       </p>
       <p>Dein SB-Team!</p>
     </Card>
@@ -17,4 +16,4 @@ const ThankYouPage = ({ history }) => (
   </div>
 );
 
-export default withRouter(ThankYouPage);
+export default ThankYouPage;

@@ -14,10 +14,12 @@
 .sb-de-checkout-page-content {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.sb-de-checkout-page-form {
+.sb-de-checkout-page-content > div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2em;
 }

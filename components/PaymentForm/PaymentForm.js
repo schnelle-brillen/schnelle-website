@@ -11,10 +11,9 @@ export default ({ price, handlePaymentSuccess }) => {
       <PayPalButton
         amount={price}
         onSuccess={(details, data) => {
-          console.log(details);
           handlePaymentSuccess(details);
         }}
-        on={(err)=>console.log(err)}
+        on={err => console.log(err)}
         options={{ clientId: PAYPAL_CLIENT_ID, currency: "EUR" }}
       />
     </Card>
