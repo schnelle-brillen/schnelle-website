@@ -12,7 +12,7 @@ import {
 import "./CheckoutPage.css";
 import calculatePrice from "../../helpers/calculatePrice";
 
-const CheckoutPage = ({ basket, client, clearBasket }) => {
+const CheckoutPage = ({ basket, client, clearBasket, removeItem }) => {
   const [formState, setFormState] = useState(0);
   const [addressInformation, setAddressInformation] = useState({
     firstname: "",
@@ -38,8 +38,10 @@ const CheckoutPage = ({ basket, client, clearBasket }) => {
                   setFormUpdate={setAddressInformation}
                   data={addressInformation}
                 />
-                <div>
-                  <Button onClick={() => setFormState(1)}>Weiter</Button>
+                <div className="sb-de-checkout-page-button-wrapper">
+                  <Button inverted onClick={() => setFormState(1)}>
+                    Weiter
+                  </Button>
                 </div>
               </>
             )}
@@ -61,12 +63,17 @@ const CheckoutPage = ({ basket, client, clearBasket }) => {
             )}
           </div>
           <div>
-            <ShoppingBasketCard basket={basket} />
-            <div>
-              <Button onClick={() => (document.location.href = "/shop")}>
-                Mehr Brillen
-              </Button>
-            </div>
+            <ShoppingBasketCard basket={basket} removeItem={removeItem} />
+            {formState < 1 && (
+              <div className="sb-de-checkout-page-button-wrapper">
+                <Button
+                  inverted
+                  onClick={() => (document.location.href = "/shop")}
+                >
+                  Mehr Brillen
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </div>

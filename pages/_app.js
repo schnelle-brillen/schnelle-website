@@ -22,6 +22,11 @@ class SchnelleWebsite extends App {
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     */}
           <link rel="manifest" href="/static/manifest.json" />
+          <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
+          />
+          <link href="/static/fonts/Facon.otf" rel="stylesheet" />
           {/*
     
       Notice the use of %PUBLIC_URL% in the tags above.

@@ -41,6 +41,9 @@ function PageWrapper({ Component, ...pageProps }) {
           addItemToBasket={item =>
             setBasket({ ...basket, items: basket.items.concat([item]) })
           }
+          removeItem={pos => {
+            setBasket({ ...basket, item: basket.items.splice(pos) });
+          }}
         />
       </div>
       <Footer />

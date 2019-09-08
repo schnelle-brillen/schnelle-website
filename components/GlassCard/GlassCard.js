@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, Icon } from "../../components";
+import { Button, Icon, Card } from "../../components";
 
 import "./GlassCard.css";
 
 export default ({ img, name, speed, price, onClick }) => {
   return (
-    <div className="sb-de-glass-card">
+    <Card className={"sb-de-glass-card"}>
       <div className="sb-de-glass-card-content">
         <h1>{name}</h1>
         <img src={img} alt={`The famous glasses ${name}`} />
@@ -24,6 +24,6 @@ export default ({ img, name, speed, price, onClick }) => {
           </Button>
         </div>
       }
-    </div>
+    </Card>
   );
 };
