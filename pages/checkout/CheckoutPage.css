@@ -7,14 +7,38 @@
 .sb-de-checkout-page-shopping-basket {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 4em;
+}
+
+.sb-de-checkout-page-form-step-wizard {
+  margin: 0 2em 2em;
+}
+
+.sb-de-checkout-page-form-step-wizard-element {
+  margin-right: 1em;
+  padding: 0 2em 0.5em;
+  border-bottom: 3px solid lightgrey;
+  font-size: 0.8rem;
+  color: lightgrey;
+}
+
+.sb-de-checkout-page-form-step-wizard-element-active {
+  border-bottom-color: #222;
+  color: black;
+}
+
+.sb-de-checkout-page-form-step-wizard-element-done {
+  border-bottom-color: var(--main-theme-color);
+  color: var(--main-theme-color);
+  cursor: pointer;
 }
 
 .sb-de-checkout-page-content {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .sb-de-checkout-page-content > div {
@@ -26,4 +50,10 @@
 
 .sb-de-checkout-page-button-wrapper {
   margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+  .sb-de-checkout-page-shopping-basket {
+    padding: 2em 1em;
+  }
 }

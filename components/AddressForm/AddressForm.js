@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput, Card } from "..";
+import { TextInput } from "..";
 
 import "./AddressForm.css";
 
@@ -7,50 +7,31 @@ export default ({ data, setFormUpdate }) => {
   const handleInputUpdate = name => value =>
     setFormUpdate({ ...data, [name]: value });
   return (
-    <Card className="sb-de-address-form">
-      <h2>Lieferadresse</h2>
-      <TextInput
-        label="Vorname"
-        placeholderLabel=""
-        input={data.firstname}
-        handleInputUpdate={handleInputUpdate("firstname")}
-      />
-      <TextInput
-        label="Nachname"
-        placeholderLabel=""
-        input={data.firstname}
-        handleInputUpdate={handleInputUpdate("lastname")}
-      />
-      <TextInput
-        label="Email"
-        placeholderLabel=""
-        input={data.firstname}
-        handleInputUpdate={handleInputUpdate("email")}
-      />
+    <div className="sb-de-address-form">
       <TextInput
         label="Straße"
         placeholderLabel=""
-        input={data.firstname}
+        value={data.address}
         handleInputUpdate={handleInputUpdate("address")}
       />
       <TextInput
         label="Hausnummer"
         placeholderLabel=""
-        input={data.firstname}
+        value={data.housenr}
         handleInputUpdate={handleInputUpdate("housenr")}
       />
       <TextInput
         label="PLZ"
         placeholderLabel=""
-        input={data.firstname}
+        value={data.zip}
         handleInputUpdate={handleInputUpdate("zip")}
       />
       <TextInput
         label="Ort"
         placeholderLabel=""
-        input={data.firstname}
+        value={data.city}
         handleInputUpdate={handleInputUpdate("city")}
       />
-    </Card>
+    </div>
   );
 };

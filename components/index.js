@@ -7,6 +7,7 @@ export { default as ShoppingBasketCard } from "./ShoppingBasketCard";
 export { default as TextInput } from "./TextInput";
 export { default as AddressForm } from "./AddressForm";
 export { default as PaymentForm } from "./PaymentForm";
+export { default as ContactForm } from "./ContactForm";
 export { default as Card } from "./Card";
 export { default as Quote } from "./Quote";
 export { default as Footer } from "./Footer";
