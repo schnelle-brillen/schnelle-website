@@ -30,31 +30,31 @@ const CheckoutPage = ({ basket, client, clearBasket, removeItem }) => {
   return (
     <div className="sb-de-basket-page">
       <div className="sb-de-checkout-page-shopping-basket">
-        <div className="sb-de-checkout-page-form-step-wizard">
-          {CHECKOUT_FORM_STEPS.map((step, i) => {
-            const isDone = i < formState;
+        <div className="sb-de-checkout-page-content">
+          <div className="sb-de-checkout-page-form">
+            <div className="sb-de-checkout-page-form-step-wizard">
+              {CHECKOUT_FORM_STEPS.map((step, i) => {
+                const isDone = i < formState;
 
-            return (
-              <span
-                className={`sb-de-checkout-page-form-step-wizard-element ${
-                  i === formState
-                    ? "sb-de-checkout-page-form-step-wizard-element-active"
-                    : ""
-                }
+                return (
+                  <span
+                    className={`sb-de-checkout-page-form-step-wizard-element ${
+                      i === formState
+                        ? "sb-de-checkout-page-form-step-wizard-element-active"
+                        : ""
+                    }
               ${
                 isDone
                   ? "sb-de-checkout-page-form-step-wizard-element-done"
                   : ""
               }`}
-                onClick={() => (isDone ? setFormState(i) : null)}
-              >
-                {step}
-              </span>
-            );
-          })}
-        </div>
-        <div className="sb-de-checkout-page-content">
-          <div className="sb-de-checkout-page-form">
+                    onClick={() => (isDone ? setFormState(i) : null)}
+                  >
+                    {step}
+                  </span>
+                );
+              })}
+            </div>
             {formState === 0 && (
               <>
                 <ContactForm
