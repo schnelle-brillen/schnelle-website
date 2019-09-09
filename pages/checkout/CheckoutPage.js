@@ -6,14 +6,14 @@ import {
   ShoppingBasketCard,
   AddressForm,
   Button,
-  PaymentForm
+  PaymentForm,
+  ContactForm
 } from "../../components";
-
+import { CHECKOUT_FORM_STEPS } from "../../constants";
 import "./CheckoutPage.css";
 import calculatePrice from "../../helpers/calculatePrice";
 
 const CheckoutPage = ({ basket, client, clearBasket, removeItem }) => {
-  const [formState, setFormState] = useState(0);
   const [addressInformation, setAddressInformation] = useState({
     firstname: "",
     lastname: "",
@@ -23,18 +23,41 @@ const CheckoutPage = ({ basket, client, clearBasket, removeItem }) => {
     city: "",
     zip: ""
   });
-  console.log(client);
+  const [formState, setFormState] = useState(0);
   const [addOrder] = useMutation(ADD_ORDER, {
     client
   });
   return (
     <div className="sb-de-basket-page">
       <div className="sb-de-checkout-page-shopping-basket">
+        <div className="sb-de-checkout-page-form-step-wizard">
+          {CHECKOUT_FORM_STEPS.map((step, i) => {
+            const isDone = i < formState;
+
+            return (
+              <span
+                className={`sb-de-checkout-page-form-step-wizard-element ${
+                  i === formState
+                    ? "sb-de-checkout-page-form-step-wizard-element-active"
+                    : ""
+                }
+              ${
+                isDone
+                  ? "sb-de-checkout-page-form-step-wizard-element-done"
+                  : ""
+              }`}
+                onClick={() => (isDone ? setFormState(i) : null)}
+              >
+                {step}
+              </span>
+            );
+          })}
+        </div>
         <div className="sb-de-checkout-page-content">
           <div className="sb-de-checkout-page-form">
             {formState === 0 && (
               <>
-                <AddressForm
+                <ContactForm
                   setFormUpdate={setAddressInformation}
                   data={addressInformation}
                 />
@@ -46,6 +69,20 @@ const CheckoutPage = ({ basket, client, clearBasket, removeItem }) => {
               </>
             )}
             {formState === 1 && (
+              <>
+                <AddressForm
+                  setFormUpdate={setAddressInformation}
+                  data={addressInformation}
+                />
+                <div className="sb-de-checkout-page-button-wrapper">
+                  <Button inverted onClick={() => setFormState(2)}>
+                    Weiter
+                  </Button>
+                </div>
+              </>
+            )}
+
+            {formState === 2 && (
               <PaymentForm
                 price={calculatePrice(basket)}
                 handlePaymentSuccess={paymentInfo => {
