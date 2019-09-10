@@ -21,15 +21,24 @@ const Home = () => {
     <div>
       <div className="sb-de-home-header">
         <div className="sb-de-home-header-overlay">
-          <h1 className="sb-de-special-header">SCHNELLE BRILLEN</h1>
-          <h2 className="sb-de-special-header">BESCHLEUNIGEN ALTER</h2>
+          <h1 className="sb-de-special-header">SCHNELLE BRILLEN.DE</h1>
+          <p>
+            Auf Schnelle Brillen DE bekommst du die Brillen mit der richtigen
+            Geschwindigkeit. <br />
+            Ob Festival, Club oder Sport wir haben die enganliegenden Modelle.{" "}
+            <br /> In unserem einfachen Shop bekommst du mit wenig Klicks den
+            Style der dich so richtig beschleunigt. <br />
+            <br />
+            Wie das funktioniert erklären wir weiter untern - oder folge doch
+            direkt dem Button zu unserem Shop.
+          </p>
           <Button
             className="sb-de-home-header-overlay-button"
             onClick={() => {
               document.location.href = "/shop";
             }}
           >
-            SCHNELLE MODELLE
+            DIE SCHNELLEN MODELLE
           </Button>
         </div>
         <video
@@ -65,6 +74,35 @@ const Home = () => {
               />
             );
           })}
+      </div>
+      <div className="sb-de-home-advantages">
+        <div className="sb-de-home-advantage">
+          <div className="sb-de-home-advantage-icon-wrapper">
+            <Icon.ShoppingCardAdd />
+          </div>
+          <h2>Shoppen</h2>
+          <p>
+            Wähle die Brillen aus die zu dir passen und dir die richtige
+            Geschwindigkeit geben.
+          </p>
+        </div>
+        <div className="sb-de-home-advantage">
+          <div className="sb-de-home-advantage-icon-wrapper">
+            <Icon.Payment />
+          </div>
+          <h2>Bezahlen</h2>
+          <p>Sicher und schnell mit Paypal, EC- oder Kreditkarte bezahlen.</p>
+        </div>
+        <div className="sb-de-home-advantage">
+          <div className="sb-de-home-advantage-icon-wrapper">
+            <Icon.ManOnBike />
+          </div>
+          <h2>Liefern</h2>
+          <p>
+            Mit hochgeschwindigkeit Arbeiten wir ab diesem Punkt an deiner
+            Belieferung.
+          </p>
+        </div>
       </div>
       <SocialMediaSideBar
         elements={[
