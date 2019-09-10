@@ -42,7 +42,7 @@ class SchnelleWebsite extends App {
   	gtag('config', 'UA-145099313-1');`
             }}
           />
-          <title>Schnelle Brillen - heute schon gesprintet?</title>
+          <title>Schnelle Brillen - erhöhe die Geschwindigkeit!</title>
         </Head>
         <PageWrapper Component={Component} {...pageProps} />
       </>
