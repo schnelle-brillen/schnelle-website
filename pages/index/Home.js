@@ -112,6 +112,16 @@ const Home = () => {
           }
         ]}
       />
+      <div className="sb-de-home-call-to-action-section">
+        <Button
+          inverted
+          onClick={() => {
+            document.location.href = "/shop";
+          }}
+        >
+          ZU DEN BRILLEN
+        </Button>
+      </div>
       <MusicPlayer />
     </div>
   );
