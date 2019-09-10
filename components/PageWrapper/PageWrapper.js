@@ -19,7 +19,7 @@ function PageWrapper({ Component, ...pageProps }) {
           Shop
         </Button>
         {basket && basket.items.length > 0 && (
-          <button
+          <div
             className="sb-de-navbar-button"
             onClick={() => {
               document.location.href = "/checkout";
@@ -29,7 +29,7 @@ function PageWrapper({ Component, ...pageProps }) {
             <div className="sb-de-navbar-shopping-badge">
               {basket.items.length}
             </div>
-          </button>
+          </div>
         )}
       </Navbar>
       <div className="sb-de-content">
