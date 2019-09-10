@@ -16,27 +16,19 @@ class SchnelleWebsite extends App {
           <meta charset="utf-8" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
-          {/*
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    */}
+          <meta name="theme-color" content="#ffffff" />
           <link rel="manifest" href="/static/manifest.json" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
             rel="stylesheet"
           />
           <link href="/static/fonts/Facon.otf" rel="stylesheet" />
-          {/*
-    
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "/static/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    */}
+          <meta
+            name="description"
+            content="Schnelle Brillen.de gibt dir die Auswahl an Brillen, die dich so richtig beschläunigen.  Beim Raven, Chillen oder Sport machen ist eine schnelle Brille ein muss."
+            class="next-head"
+          ></meta>
+          <meta http-equiv="language" content="de"></meta>
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-145099313-1"
