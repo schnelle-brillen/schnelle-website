@@ -5,7 +5,8 @@ const options = {
     GRAPHQL_URL: "https://api.schnelle-brillen.de/graphql"
   },
   production: {
-    PAYPAL_CLIENT_ID: "sb",
+    PAYPAL_CLIENT_ID:
+      "AUkIxfYWo8MJ0SKlb9DhejaJYrpgtFxqldzn2vsfHG__XzqAGRkl7xm8zaUOQbmkwAiOqeI9REeVFFpi",
     CONTENT_URL: "https://api.schnelle-brillen.de/",
     GRAPHQL_URL: "https://api.schnelle-brillen.de/graphql"
   }
